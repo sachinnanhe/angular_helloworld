@@ -1,0 +1,63 @@
+<h4>{{title}}</h4>
+
+<div class="row">
+  <div class="col">  
+      <input type="text" class="form-control" placeholder="First Name"[(ngModel)] = user.firstname
+       aria-label="First name">
+  </div>
+</div>
+  <br>
+    <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Last Name"[(ngModel)] = user.lastname
+       aria-label="Last name">
+    </div>
+  </div>
+    <br>
+    <div class="row">
+    <div class="col">
+        <input type="number" class="form-control"
+        placeholder="age"[(ngModel)] = user.age
+        aria-label="age">
+    </div>
+  </div>
+  <h3>select gender</h3>
+  <div class="form-check">
+    <input class="form-check-input" [(ngModel)] = user.gender
+     value="Male" type="radio" name="gender" id="male">
+    <label class="form-check-label" for="male">Male</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input"[(ngModel)] = user.gender
+     value="female" type="radio" name="gender" id="female">
+    <label class="form-check-label" for="female">Female</label>
+  </div>
+  <br>
+  
+
+ <!-- <span><mark>First name goes here</mark></span>
+<input type="text"[(ngModel)] = userDetails.Firstname placeholder="Enter your first Name"/>
+<br>
+<br>
+<span>Last name goes here</span>
+<input type="text"[(ngModel)] = userDetails.Lastname placeholder="Enter your last name"/>
+<span>age</span>
+<input type="number"[(ngModel)] = userDetails.Age placeholder="Enter your age"/> 
+<br> -->
+<button type="button" class="btn brn-save"(click)="save()">save</button>
+<button type="button" class="btn brn-sort"(click)="sort()">sort</button>
+
+<ol class="list-group list-group-numbered">
+  <li *ngFor="let u of users" class="list-group-item">
+    <span>{{u.firstname}}</span>
+    <br>
+    <span>{{u.lastname}}</span>
+    <br>
+    <span>{{u.age}}</span>
+    <br>
+    <span>{{u.gender}}</span>
+    <br>
+    <button type="button" class="btn btn-danger">Delete</button>
+  </li>
+ 
+</ol>
