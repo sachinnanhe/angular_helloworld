@@ -37,9 +37,15 @@ export class UserFormComponent implements OnInit {
     })
   }
 
+  // sort(){
+  //   this.users.sort(function(user1,user2){
+  //     return user1.age - user2.age
+  //   })
+  // }
+
   sort(){
-    this.users.sort(function(user1,user2){
-      return user1.age - user2.age
+    this.users. sort(function(user1,user2){
+      return user2.age-user1.age
     })
   }
 
